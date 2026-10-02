@@ -12,7 +12,7 @@ module NotificationSettings
 
       #serialize :settings, Hashie::Mash
 
-      serialize :settings, type: Hashie::Mash
+      serialize :settings, type: Hashie::Mash, coder: YAML
 
       include NotificationSettings::Settings::InstanceMethods
     end
